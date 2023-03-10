@@ -1,5 +1,27 @@
 import App from './App'
-
+// 导入网络请求包
+import {$http} from '@escook/request-miniprogram'
+// 封装请求
+uni.$http = $http
+$http.baseUrl = 'https://www.uinav.com'
+// 请求拦截器
+$http.beforeRequest = function(option){
+	uni.showLoading({
+		title:'数据加载中。。。。'
+	})
+}
+// // 响应单拦截器
+$http.afterRequest = function(){
+	uni.hideLoading()
+}
+// //封装弹窗方法
+uni.$showMsg = function(title = '数据请求失败',duration = 1500){
+	uni.showToast({
+		title,
+		duration,
+		icon:'none'
+	})
+}
 // #ifndef VUE3
 import Vue from 'vue'
 Vue.config.productionTip = false
