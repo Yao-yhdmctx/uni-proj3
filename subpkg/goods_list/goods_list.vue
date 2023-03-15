@@ -58,7 +58,6 @@
 			this.total = 0
 			this.isloading = false
 			this.goodsList = []
-			
 			this.getGoodsList(()=>uni.stopPullDownRefresh())
 		}
 		
