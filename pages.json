@@ -44,6 +44,7 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"uniIdRouter": {},
+	"lazyCodeLoading":"requiredComponents",
 	"tabBar": {
 		"selectedColor": "#C00000",
 		"list": [
@@ -96,7 +97,17 @@
                 }
                 
                 }
+                ,{
+                    "path" : "search/search",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
             ]
 		}
 	]
+	
 }
