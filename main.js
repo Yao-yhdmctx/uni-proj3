@@ -1,6 +1,7 @@
 import App from './App'
 // 导入网络请求包
 import {$http} from '@escook/request-miniprogram'
+import store from './store/store.js'
 // 封装请求
 uni.$http = $http
 $http.baseUrl = 'https://www.uinav.com'
@@ -56,7 +57,8 @@ try {
 } catch (error) { }
 
 const app = new Vue({
-  ...App
+  ...App,
+  store
 })
 app.$mount()
 // #endif
