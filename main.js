@@ -10,6 +10,11 @@ $http.beforeRequest = function(option){
 	uni.showLoading({
 		title:'数据加载中。。。。'
 	})
+	if(option.url.indexOf('/my/') !== -1){
+		option.header = {
+			Authorization:store.state.m_user.token
+		}
+	}
 }
 // // 响应单拦截器
 $http.afterRequest = function(){
